@@ -4,6 +4,7 @@
   "description": "learn react the fastest possible to find a internship",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"scr/**/*.{js, jsx, ts, tsx, css, html}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/lucca3447/learnreact2/issues"
   },
-  "homepage": "https://github.com/lucca3447/learnreact2#readme"
+  "homepage": "https://github.com/lucca3447/learnreact2#readme",
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
 }
