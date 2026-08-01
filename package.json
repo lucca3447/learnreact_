@@ -4,6 +4,9 @@
   "description": "learn react the fastest possible to find a internship",
   "main": "index.js",
   "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
     "format": "prettier --write \"scr/**/*.{js, jsx, ts, tsx, css, html}\"",
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +16,7 @@
     "url": "git+https://github.com/lucca3447/learnreact2.git"
   },
   "keywords": [],
+  "type": "module",
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -21,9 +25,15 @@
   },
   "homepage": "https://github.com/lucca3447/learnreact2#readme",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.9.0",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
