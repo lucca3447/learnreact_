@@ -16,10 +16,13 @@ export default function Order (){
     const [loading, setLoading] = useState(true);
 
     let price, selectedPizza;
-    if(!loading){
+    
+    if (!loading) {
         selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id);
-
-    }
+        price = intl.format(
+            selectedPizza.sizes ? selectedPizza.sizes[pizzaSize] : ""
+        );
+}
 
     async function fetchPizzaTypes(){
         const pizzaRes = await fetch("/api/pizzas");
@@ -94,14 +97,16 @@ export default function Order (){
                     <button type="submit"> Add to cart</button>
                 </div>
                 <div className="order-pizza">
-                    <Pizza
-                    name={selectedPizza.name}
-                    description={selectedPizza.description}
-                    image={selectedPizza.image}
-                    />
-                    <p>$13.50</p>
-
-
+                    {loading ? (
+                        <h1>loading pizza</h1>) :
+                        (
+                        <Pizza
+                        name={selectedPizza.name}
+                        description={selectedPizza.description}
+                        image={selectedPizza.image}
+                        />
+                    )}
+                    <p>{price}</p>
                 </div>
             </form>
 
