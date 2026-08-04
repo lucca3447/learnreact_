@@ -17,7 +17,7 @@ export default function Order (){
 
     let price, selectedPizza;
     if(!loading){
-        selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id)
+        selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id);
 
     }
 
@@ -95,9 +95,9 @@ export default function Order (){
                 </div>
                 <div className="order-pizza">
                     <Pizza
-                    name="Pepperoni"
-                    description="another pizza idk"
-                    image="public\pizzas\pepperoni.webp"
+                    name={selectedPizza.name}
+                    description={selectedPizza.description}
+                    image={selectedPizza.image}
                     />
                     <p>$13.50</p>
 
