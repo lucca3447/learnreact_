@@ -92,22 +92,24 @@ export default function Order (){
                                />
                                <label htmlFor="pizza-l">Large</label> 
                             </span>
+                            <div/>
                         </div>
                     </div>
                     <button type="submit"> Add to cart</button>
                 </div>
-                <div className="order-pizza">
                     {loading ? (
                         <h1>loading pizza</h1>) :
                         (
+                        <div className="order-pizza">
                         <Pizza
                         name={selectedPizza.name}
                         description={selectedPizza.description}
                         image={selectedPizza.image}
-                        />
-                    )}
-                    <p>{price}</p>
+                        />  
+                        <p>{price}</p>
                 </div>
+                    )}
+                  
             </form>
 
         </div>
