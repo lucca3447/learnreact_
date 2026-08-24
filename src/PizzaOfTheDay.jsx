@@ -28,3 +28,5 @@ const PizzaOfTheDay = () => {
         </div>
     )
 }
+
+export default PizzaOfTheDay;
