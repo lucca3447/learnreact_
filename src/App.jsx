@@ -3,15 +3,18 @@ import { createRoot } from "react-dom/client";
 import PizzaOfTheDay from "./PizzaOfTheDay";
 import Order from "./Order";
 import Header from "./Header";
+import { CartContext } from "./contexts";
 
 const App = () => {
   return (
     <StrictMode>
-      <div>
-        <Header />
-        <Order />
-        <PizzaOfTheDay />
-      </div>
+      <CartContext.Provider>
+        <div>
+          <Header />
+          <Order />
+          <PizzaOfTheDay />
+        </div>
+      </CartContext.Provider>
     </StrictMode>
   );
 };
