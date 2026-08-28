@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { createLazyFileRoute } from "@tanstack/react-router";
@@ -10,7 +9,7 @@ export const Route = createLazyFileRoute("/past")({
 
 function PastOrdersRoute() {
   const [page, setPage] = useState(1);
-  const [isLoading, data] = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["past-orders", page],
     queryFn: () => getPastOrders(page),
     staleTime: 30000,
@@ -18,11 +17,10 @@ function PastOrdersRoute() {
   if (isLoading) {
     return (
       <div className="past-orders">
-        <h2>Loading...</h2>
+        <h2>LOADING …</h2>
       </div>
     );
   }
-
   return (
     <div className="past-orders">
       <table>
