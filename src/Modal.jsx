@@ -19,7 +19,3 @@ const Modal = ({ children })=>{
 
 export default Modal;
 
-
-<div>
-    <h1>lol</h1>
-</div>
