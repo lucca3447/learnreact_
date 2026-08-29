@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import postContact from "../api/postContact";
 
 export const Route = createLazyFileRoute("/contact")({
-  component: () => <div>Hello /contact!</div>,
+  component: ContactRoute,
 });
 
 function ContactRoute() {
