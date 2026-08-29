@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import Pizza from "../Pizza";
 
 test("alt test renders on Pizza image", async () => {
-  const name = "My favorite pizza";
+  const name = "I should be a pizza, but it's Kurisu";
   const src =
     "https://i.pinimg.com/1200x/97/a8/14/97a81445e810015073e9ad30fa903042.jpg";
   const screen = render(
