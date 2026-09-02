@@ -27,7 +27,7 @@ function ContactRoute() {
         <form action={mutation.mutate}>
           <ContactInput name="name" placeholder="Name" />
           <ContactInput type="email" name="email" placeholder="Email" />
-          <ContactInput placeholder="Message" name="message"></textarea>
+          <ContactInput placeholder="Message" name="message"/>
           <button>Submit</button>
         </form>
       )}
@@ -35,14 +35,14 @@ function ContactRoute() {
   );
 }
 
-function ContactInput() {
-  const {pending} = useFormStatus();
+function ContactInput(props) {
+  const { pending } = useFormStatus();
   return (
     <input
       disabled={pending}
-      name={Props.name}
+      name={props.name}
       type={props.type}
       placeholder={props.placeholder}
-    ></input>
+    />
   );
 }
